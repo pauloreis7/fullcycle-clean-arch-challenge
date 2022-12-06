@@ -11,9 +11,11 @@ export default class Customer extends Entity {
 
   constructor(id: string, name: string) {
     super()
+
     this._id = id
     this._name = name
     this.validate()
+
     if (this.notification.hasErrors()) {
       throw new NotificationError(this.notification.getErrors())
     }
@@ -40,6 +42,10 @@ export default class Customer extends Entity {
     return this._address
   }
 
+  set Address(address: Address) {
+    this._address = address
+  }
+
   changeAddress(address: Address) {
     this._address = address
   }
@@ -61,9 +67,5 @@ export default class Customer extends Entity {
 
   addRewardPoints(points: number) {
     this._rewardPoints += points
-  }
-
-  set Address(address: Address) {
-    this._address = address
   }
 }
