@@ -5,10 +5,7 @@ import {
   OutputUpdateCustomerDto
 } from './update.customer.dto'
 export default class UpdateCustomerUseCase {
-  private CustomerRepository: CustomerRepositoryInterface
-  constructor(CustomerRepository: CustomerRepositoryInterface) {
-    this.CustomerRepository = CustomerRepository
-  }
+  constructor(private CustomerRepository: CustomerRepositoryInterface) {}
 
   async execute(
     input: InputUpdateCustomerDto

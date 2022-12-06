@@ -4,10 +4,10 @@ import NotificationError from '../../@shared/notification/notification.error'
 import CustomerValidatorFactory from '../factory/customer.validator.factory'
 
 export default class Customer extends Entity {
-  private _name: string = ''
+  private _name = ''
   private _address!: Address
-  private _active: boolean = false
-  private _rewardPoints: number = 0
+  private _active = false
+  private _rewardPoints = 0
 
   constructor(id: string, name: string) {
     super()

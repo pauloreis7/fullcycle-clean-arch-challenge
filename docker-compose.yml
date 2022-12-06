@@ -8,6 +8,7 @@ services:
       args:
         PORT: 8080
     image: fullcycle-clean-arch-challenge/api:dev
+    command: npm run dev
     container_name: api
     restart: always
     tty: true
